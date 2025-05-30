@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkpxxvvqmf7od"]
+
+[ext_resource type="Script" path="res://level/TestLvl.cs" id="1_81e7w"]
+[ext_resource type="PackedScene" uid="uid://khtlnc8i4d7v" path="res://maps/MALLFLOOR.tscn" id="2_rxr3p"]
+[ext_resource type="Shader" path="res://shaders/pixeleffect.gdshader" id="3_cfsu7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dnq0v"]
+shader = ExtResource("3_cfsu7")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_81e7w")
+
+[node name="Mallfloor" parent="." instance=ExtResource("2_rxr3p")]
+position = Vector2(-220, 7)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_dnq0v")
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 1155.0
+offset_bottom = 649.0
+color = Color(1, 1, 1, 0)
